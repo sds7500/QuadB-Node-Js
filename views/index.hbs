@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+    <title>QuadB-Somya Sheti</title>
+</head>
+<body>
+      <div class="top ">
+            <div class="flex justify-between">
+                <div class="branding">
+                    <h1 style="color: skyblue;">HOLDINFO<span style="color: white;font-size:small">.com</span></h1>
+                    <p style="margin-top: 0.7rem;">Powered By <span style="color: skyblue;">Finstreet</span></p>
+                </div>
+                <div class="dropdown flex items-center">
+                    <select name="inr" id="inr" style="height:fit-content;padding:3px;background-color:gray;border-radius:3px">
+                    <option value="INR">INR</option>
+                    </select>
+                    <select name="btc" id="btc" style="height:fit-content;padding:3px; margin-left:3px;background-color:grey;border-radius:2px">
+                    <option value="BTC">BTC</option>
+                    </select>
+                </div>
+                <div class="flex items-center">
+                    <img src="images/58.png" style="width: 3rem; ">
+                    <img src="images/tele.png" style="width: 12rem;">
+                    <label class="switch" >
+                        <input type="checkbox" checked>
+                        <span class="slider round"></span>
+                    </label>    
+                </div>
+            </div>
+        </div>  
+
+        <div>
+            <table>
+            <tr>
+            <th>#</th>
+            <th>name</th>
+            <th>Last</th>
+            <th>Buy / Sell Price</th>
+            <th>volume</th>
+            <th>base_unit</th>
+            </tr>
+            {{#each Product}} 
+            <tr>
+                <td></td>
+                <td>{{this.value.name}}</td>
+                <td>&#x20B9; {{this.value.last}}</td>
+                <td>&#x20B9; {{this.value.buy}} &#47; &#x20B9; {{this.value.sell}}</td>
+                <td>{{this.value.volume}}</td>
+                <td>{{this.value.base_unit}}</td>
+            </tr>
+            {{/each}}
+            </table>
+        </div>
+</body>
+</html>
